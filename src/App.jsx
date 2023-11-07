@@ -1,6 +1,8 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
+// eslint-disable-next-line no-unused-vars
 
+// eslint-disable-next-line no-unused-vars
 const tweetsArray = [
   {
     user: {
@@ -40,7 +42,8 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet /> 
+      <div className="actions"></div>
     </div>
   );
 }

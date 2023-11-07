@@ -1,28 +1,29 @@
-function Tweet() {
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+import React from "react";
+import User from "./user"; 
+import Actions from "./Actions";
+// eslint-disable-next-line no-unused-vars
+import ProfileImage from "./ProfileImage"; 
+import Timestamp from "./Timestamp";
+import Message from "./Message";
+
+function Tweet(props) {
   return (
     <div className="tweet">
-      <img
-        src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/ih_logo.jpeg"
-        className="profile"
-        alt="profile"
-      />
-
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
-
-          <span className="timestamp">Nov 30, 2020</span>
+<ProfileImage image={IMAGE_URL} />
+          <User name={props.tweet.name} handle={props.tweet.handle} />
+          <span className="timestamp"> TWEET_TIMESTAMP </span>
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <p className="message">{props.tweet.message}  <Message message={TWEET_MESSAGE} />
+</p>
 
-        <div className="actions">
+        <div className="Actions">
+        <Actions />
+
           {/* Font Awesome icons */}
           <i className="far fa-comment" data-testid="comment-icon"></i>
           <i className="fas fa-retweet" data-testid="retweet-icon"></i>
@@ -30,7 +31,6 @@ function Tweet() {
           <i className="fas fa-share" data-testid="share-icon"></i>
         </div>
       </div>
-
       <i className="fas fa-ellipsis-h"></i>
     </div>
   );
