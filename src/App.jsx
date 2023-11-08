@@ -1,5 +1,11 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
+import User from "./components/user";
+import Actions from "./components/Actions";
+import Timestamp from "./components/Timestamp";
+// eslint-disable-next-line no-unused-vars
+import profileImage from "./components/ProfileImage";
+import Message from "./components/Message";
 // eslint-disable-next-line no-unused-vars
 
 // eslint-disable-next-line no-unused-vars
@@ -41,10 +47,16 @@ const tweetsArray = [
 
 function App() {
   return (
-    <div className="App">
-      <Tweet /> 
+    <><div className="App">
+      <Tweet />
       <div className="actions"></div>
-    </div>
+    </div><Message />
+    <Actions/>
+    <User/>
+    <Timestamp/>
+    <profileImage/>
+    </>
+
   );
 }
 
